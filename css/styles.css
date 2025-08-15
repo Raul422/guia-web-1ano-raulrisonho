@@ -1,0 +1,114 @@
+/* Variáveis CSS */
+:root {
+    /* Cores principais do projeto */
+    --color-primary: #2563EB;
+    --color-secondary: #10B981;
+    --color-text: #111827;
+    --color-background-light: #F3F4F6;
+    --color-border: #E5E7EB;
+
+    /* Fontes do projeto */
+    --font-poppins: "Poppins", sans-serif;
+    --font-inter: "Inter", sans-serif;
+}
+
+/* Estilos base */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-inter);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+/* Estilos para títulos */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-poppins);
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* Header e Navegação */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: 500;
+}
+
+/* Botão do menu hambúrguer */
+.menu-toggle {
+    display: none;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-background-light);
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Cards */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-background-light);
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav.active ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 1rem;
+    }
+}

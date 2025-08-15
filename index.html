@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Guia Web</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Guia Profissional de Desenvolvimento Web</h1>
+        <button class="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="tecnologias.html">Tecnologias</a></li>
+                <li><a href="boas-praticas.html">Boas Práticas</a></li>
+                <li><a href="fluxo.html">Fluxo</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Aprenda Desenvolvimento Web de Forma Prática e Profissional</h2>
+            <p>Domine HTML, CSS e JavaScript com exemplos práticos e reais</p>
+            <button class="btn-primary">Começar</button>
+        </div>
+    </section>
+
+    <section class="tech-overview">
+        <h2>O que é HTML, CSS, JS?</h2>
+        <div class="cards-container">
+            <article class="card">
+                <h3>HTML</h3>
+                <p>HTML é a linguagem de marcação que estrutura todo o conteúdo da web. É o esqueleto de qualquer página web.</p>
+                <pre><code>&lt;button class="btn"&gt;
+    Clique Aqui
+&lt;/button&gt;</code></pre>
+                <p>Use HTML quando precisar definir a estrutura e o conteúdo da sua página web.</p>
+            </article>
+
+            <article class="card">
+                <h3>CSS</h3>
+                <p>CSS é a linguagem de estilo que dá vida ao HTML, permitindo criar layouts responsivos e designs atraentes.</p>
+                <pre><code>.btn {
+    background: blue;
+    color: white;
+    padding: 10px;
+}</code></pre>
+                <p>Use CSS para estilizar e posicionar elementos HTML, criando layouts responsivos.</p>
+            </article>
+
+            <article class="card">
+                <h3>JavaScript</h3>
+                <p>JavaScript é a linguagem de programação que torna as páginas web interativas e dinâmicas.</p>
+                <pre><code>button.addEventListener(
+    'click', 
+    () => alert('Clicado!')
+);</code></pre>
+                <p>Use JavaScript quando precisar adicionar interatividade e comportamentos dinâmicos.</p>
+            </article>
+        </div>
+    </section>
+
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tecnologias.html">Tecnologias</a></li>
+                <li><a href="boas-praticas.html">Boas Práticas</a></li>
+                <li><a href="fluxo.html">Fluxo</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2025 Guia Web. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
