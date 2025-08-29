@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Página inicial do Guia Web - Aprenda HTML, CSS e JavaScript">
+	<title>Home - Guia Web</title>
+	<link rel="stylesheet" href="css/styles.css?v=3">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<a class="skip-link" href="#main">Pular para o conteúdo</a>
+	<header>
+		<h1>Guia Profissional de Desenvolvimento Web</h1>
+		<button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema" aria-pressed="false">🌙</button>
+		<button class="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+		<nav role="navigation" aria-label="Menu principal">
+			<ul id="nav-menu">
+				<li><a href="index.html" aria-current="page">Home</a></li>
+				<li><a href="tecnologias.html">Tecnologias</a></li>
+				<li><a href="boas-praticas.html">Boas Práticas</a></li>
+				<li><a href="fluxo.html">Fluxo</a></li>
+				<li><a href="quiz.html">Quiz</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main id="main">
+	<section class="hero">
+		<div class="hero-content">
+			<h2>Aprenda Desenvolvimento Web de Forma Prática e Profissional</h2>
+			<p>Domine HTML, CSS e JavaScript com exemplos práticos e reais</p>
+			<button class="btn-primary">Começar</button>
+		</div>
+	</section>
+
+	<section class="tech-overview">
+		<h2>O que é HTML, CSS, JS?</h2>
+		<div class="cards-container">
+			<article class="card">
+				<h3>HTML</h3>
+				<p>HTML é a linguagem de marcação que estrutura todo o conteúdo da web. É o esqueleto de qualquer página web.</p>
+			</article>
+
+			<article class="card">
+				<h3>CSS</h3>
+				<p>CSS é a linguagem de estilo que dá vida ao HTML, permitindo criar layouts responsivos e designs atraentes.</p>
+			</article>
+
+			<article class="card">
+				<h3>JavaScript</h3>
+				<p>JavaScript é a linguagem de programação que torna as páginas web interativas e dinâmicas.</p>
+			</article>
+		</div>
+	</section>
+	</main>
+
+	<footer>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="tecnologias.html">Tecnologias</a></li>
+				<li><a href="boas-praticas.html">Boas Práticas</a></li>
+				<li><a href="fluxo.html">Fluxo</a></li>
+				<li><a href="quiz.html">Quiz</a></li>
+			</ul>
+		</nav>
+		<p>&copy; 2025 Guia Web. Todos os direitos reservados.</p>
+	</footer>
+
+	<script src="js/app.js?v=3"></script>
+</body>
+</html>
