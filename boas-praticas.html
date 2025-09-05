@@ -27,7 +27,205 @@
     </header>
 
     <main>
-        <!-- Conteúdo será adicionado posteriormente -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Boas Práticas de Desenvolvimento Web</h2>
+                <p>Guia essencial para escrever código de qualidade e manter projetos organizados</p>
+            </div>
+        </section>
+
+        <nav class="topics-nav">
+            <h2>Navegue pelos Tópicos</h2>
+            <ul>
+                <li><a href="#codigo-limpo">Código Limpo</a></li>
+                <li><a href="#html-semantico">HTML Semântico</a></li>
+                <li><a href="#css-organizado">CSS Organizado</a></li>
+                <li><a href="#performance">Performance</a></li>
+                <li><a href="#seguranca">Segurança</a></li>
+                <li><a href="#manutencao">Manutenção</a></li>
+            </ul>
+        </nav>
+
+        <section id="codigo-limpo" class="best-practices">
+            <h2>Práticas Essenciais</h2>
+            <div class="cards-container">
+                <article class="card">
+                    <h3>Código Limpo</h3>
+                    <ul>
+                        <li>Use nomes descritivos para variáveis e funções</li>
+                        <li>Mantenha funções pequenas e com única responsabilidade</li>
+                        <li>Comente apenas o necessário e de forma clara</li>
+                        <li>Mantenha a indentação consistente</li>
+                        <li>Evite código duplicado (DRY - Don't Repeat Yourself)</li>
+                    </ul>
+                    <div class="video-container">
+                        <h4>Vídeo: Princípios de Código Limpo</h4>
+                        <iframe width="100%" height="315" 
+                            src="https://www.youtube.com/embed/9w3o9NHXqu0" 
+                            title="Clean Code em JavaScript" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                        <p class="video-description">Aprenda os princípios fundamentais de código limpo e como aplicá-los em seus projetos.</p>
+                    </div>
+                </article>
+
+                <article id="html-semantico" class="card">
+                    <h3>HTML Semântico</h3>
+                    <ul>
+                        <li>Use tags HTML5 semânticas (header, nav, main, etc)</li>
+                        <li>Estruture o conteúdo de forma lógica</li>
+                        <li>Mantenha a acessibilidade em mente</li>
+                        <li>Use atributos ARIA quando necessário</li>
+                        <li>Valide seu HTML regularmente</li>
+                    </ul>
+                    <div class="video-container">
+                        <h4>Vídeo: HTML Semântico na Prática</h4>
+                        <iframe width="100%" height="315" 
+                            src="https://www.youtube.com/embed/jEJUopJv12I" 
+                            title="HTML Semântico" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                        <p class="video-description">Aprenda a estruturar seu HTML de forma semântica e acessível.</p>
+                    </div>
+                </article>
+
+                <article id="css-organizado" class="card">
+                    <h3>CSS Organizado</h3>
+                    <ul>
+                        <li>Siga uma metodologia (BEM, SMACSS, etc)</li>
+                        <li>Use variáveis CSS para valores reutilizáveis</li>
+                        <li>Organize o CSS por componentes</li>
+                        <li>Evite seletores muito específicos</li>
+                        <li>Mantenha a responsividade em mente</li>
+                    </ul>
+                    <div class="video-container">
+                        <h4>Vídeo: Organizando seu CSS</h4>
+                        <iframe width="100%" height="315" 
+                            src="https://www.youtube.com/embed/WgXv95WQkOM" 
+                            title="CSS Organizado" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                        <p class="video-description">Descubra as melhores práticas para organizar seu CSS de forma escalável.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="advanced-practices">
+            <h2>Práticas Avançadas</h2>
+            <div class="cards-container">
+                <article id="performance" class="card">
+                    <h3>Performance</h3>
+                    <ul>
+                        <li>Otimize imagens e assets</li>
+                        <li>Minimize requisições HTTP</li>
+                        <li>Use lazy loading quando apropriado</li>
+                        <li>Implemente cache efetivamente</li>
+                        <li>Monitore o tempo de carregamento</li>
+                    </ul>
+                    <div class="video-container">
+                        <h4>Vídeo: Otimização de Performance Web</h4>
+                        <iframe width="100%" height="315" 
+                            src="https://www.youtube.com/embed/WPqXP_kLzpo" 
+                            title="Performance Web" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                        <p class="video-description">Aprenda técnicas avançadas de otimização de performance para sites.</p>
+                    </div>
+                </article>
+
+                <article id="seguranca" class="card">
+                    <h3>Segurança</h3>
+                    <ul>
+                        <li>Sanitize inputs do usuário</li>
+                        <li>Use HTTPS em produção</li>
+                        <li>Implemente CSP (Content Security Policy)</li>
+                        <li>Mantenha dependências atualizadas</li>
+                        <li>Siga as diretrizes OWASP</li>
+                    </ul>
+                    <div class="video-container">
+                        <h4>Vídeo: Segurança em Aplicações Web</h4>
+                        <iframe width="100%" height="315" 
+                            src="https://www.youtube.com/embed/G0nZf1cmgX8" 
+                            title="Segurança Web" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                        <p class="video-description">Aprenda as principais práticas de segurança para desenvolvimento web.</p>
+                    </div>
+                </article>
+
+                <article id="manutencao" class="card">
+                    <h3>Manutenção</h3>
+                    <ul>
+                        <li>Use controle de versão (Git)</li>
+                        <li>Documente decisões importantes</li>
+                        <li>Mantenha um README atualizado</li>
+                        <li>Implemente testes automatizados</li>
+                        <li>Faça revisões de código</li>
+                    </ul>
+                    <div class="video-container">
+                        <h4>Vídeo: Manutenção de Código</h4>
+                        <iframe width="100%" height="315" 
+                            src="https://www.youtube.com/embed/vV1YFY_l7P8" 
+                            title="Manutenção de Código" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                        <p class="video-description">Descubra como manter seu código organizado e fácil de manter a longo prazo.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <div class="back-to-top">
+            <a href="#" class="btn-secondary">Voltar ao topo ↑</a>
+        </div>
+
+        <section class="tools-practices">
+            <h2>Ferramentas Recomendadas</h2>
+            <div class="cards-container">
+                <article class="card">
+                    <h3>Desenvolvimento</h3>
+                    <ul>
+                        <li>ESLint - Análise de código JavaScript</li>
+                        <li>Prettier - Formatação de código</li>
+                        <li>StyleLint - Análise de código CSS</li>
+                        <li>HTML Validator - Validação de HTML</li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <h3>Performance</h3>
+                    <ul>
+                        <li>Lighthouse - Auditoria de performance</li>
+                        <li>WebPageTest - Testes de velocidade</li>
+                        <li>Chrome DevTools - Análise de performance</li>
+                        <li>GTmetrix - Otimização de site</li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <h3>Qualidade</h3>
+                    <ul>
+                        <li>Jest - Framework de testes</li>
+                        <li>Cypress - Testes end-to-end</li>
+                        <li>SonarQube - Análise de qualidade</li>
+                        <li>WebAIM - Verificação de acessibilidade</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
     </main>
 
     <footer>

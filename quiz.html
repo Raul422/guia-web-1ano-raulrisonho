@@ -27,7 +27,286 @@
     </header>
 
     <main>
-        <!-- Conteúdo será adicionado posteriormente -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Teste seus Conhecimentos</h2>
+                <p>Escolha o nível do quiz e teste seus conhecimentos em desenvolvimento web!</p>
+            </div>
+        </section>
+
+        <section class="quiz-level-selector">
+            <h2>Selecione o Nível</h2>
+            <div class="level-buttons">
+                <button id="basic-level" class="btn-primary">Nível Básico</button>
+                <button id="intermediate-level" class="btn-primary">Nível Intermediário</button>
+            </div>
+        </section>
+
+        <section id="basic-quiz" class="quiz-section" style="display: none;">
+            <h2>Quiz Nível Básico</h2>
+            <p class="quiz-description">Teste seus conhecimentos fundamentais em desenvolvimento web.</p>
+            <div class="cards-container">
+                <article class="card">
+                    <h3>HTML Básico</h3>
+                    <div class="quiz-question">
+                        <p>1. Qual tag HTML é usada para criar um título principal?</p>
+                        <div class="quiz-options">
+                            <label>
+                                <input type="radio" name="basic-q1" value="a"> &lt;header&gt;
+                            </label>
+                            <label>
+                                <input type="radio" name="basic-q1" value="b"> &lt;h1&gt;
+                            </label>
+                            <label>
+                                <input type="radio" name="basic-q1" value="c"> &lt;title&gt;
+                            </label>
+                            <label>
+                                <input type="radio" name="basic-q1" value="d"> &lt;main&gt;
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p>2. Para que serve a tag &lt;p&gt;?</p>
+                        <div class="quiz-options">
+                            <label>
+                                <input type="radio" name="basic-q2" value="a"> Criar um parágrafo
+                            </label>
+                            <label>
+                                <input type="radio" name="basic-q2" value="b"> Inserir uma imagem
+                            </label>
+                            <label>
+                                <input type="radio" name="basic-q2" value="c"> Criar um link
+                            </label>
+                            <label>
+                                <input type="radio" name="basic-q2" value="d"> Definir um título
+                            </label>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <h3>CSS Básico</h3>
+                    <div class="quiz-question">
+                        <p>3. Como mudar a cor do texto em CSS?</p>
+                        <div class="quiz-options">
+                            <label>
+                                <input type="radio" name="basic-q3" value="a"> text-color: red;
+                            </label>
+                            <label>
+                                <input type="radio" name="basic-q3" value="b"> color: red;
+                            </label>
+                            <label>
+                                <input type="radio" name="basic-q3" value="c"> font-color: red;
+                            </label>
+                            <label>
+                                <input type="radio" name="basic-q3" value="d"> text: red;
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p>4. Qual propriedade CSS define o tamanho da fonte?</p>
+                        <div class="quiz-options">
+                            <label>
+                                <input type="radio" name="basic-q4" value="a"> text-size
+                            </label>
+                            <label>
+                                <input type="radio" name="basic-q4" value="b"> font-size
+                            </label>
+                            <label>
+                                <input type="radio" name="basic-q4" value="c"> size
+                            </label>
+                            <label>
+                                <input type="radio" name="basic-q4" value="d"> text-style
+                            </label>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <h3>JavaScript Básico</h3>
+                    <div class="quiz-question">
+                        <p>5. Como declarar uma variável em JavaScript?</p>
+                        <div class="quiz-options">
+                            <label>
+                                <input type="radio" name="basic-q5" value="a"> variable x = 5;
+                            </label>
+                            <label>
+                                <input type="radio" name="basic-q5" value="b"> var x = 5;
+                            </label>
+                            <label>
+                                <input type="radio" name="basic-q5" value="c"> x := 5;
+                            </label>
+                            <label>
+                                <input type="radio" name="basic-q5" value="d"> int x = 5;
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p>6. Como exibir uma mensagem no console?</p>
+                        <div class="quiz-options">
+                            <label>
+                                <input type="radio" name="basic-q6" value="a"> console.write("Olá");
+                            </label>
+                            <label>
+                                <input type="radio" name="basic-q6" value="b"> console.log("Olá");
+                            </label>
+                            <label>
+                                <input type="radio" name="basic-q6" value="c"> print("Olá");
+                            </label>
+                            <label>
+                                <input type="radio" name="basic-q6" value="d"> log("Olá");
+                            </label>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="quiz-controls">
+                <button id="submit-basic-quiz" class="btn-primary">Verificar Respostas</button>
+                <button id="reset-basic-quiz" class="btn-secondary">Recomeçar</button>
+            </div>
+            <div id="basic-quiz-results" class="quiz-results" style="display: none;">
+                <h3>Seus Resultados - Nível Básico</h3>
+                <p>Pontuação: <span id="basic-score">0</span>/6</p>
+                <div id="basic-feedback"></div>
+            </div>
+        </section>
+
+        <section id="intermediate-quiz" class="quiz-section" style="display: none;">
+            <h2>Quiz Nível Intermediário</h2>
+            <p class="quiz-description">Teste seus conhecimentos avançados em desenvolvimento web.</p>
+            <div class="cards-container">
+                <article class="card">
+                    <h3>HTML Avançado</h3>
+                    <div class="quiz-question">
+                        <p>1. Qual atributo HTML5 é usado para validação de formulários sem JavaScript?</p>
+                        <div class="quiz-options">
+                            <label>
+                                <input type="radio" name="inter-q1" value="a"> validate
+                            </label>
+                            <label>
+                                <input type="radio" name="inter-q1" value="b"> pattern
+                            </label>
+                            <label>
+                                <input type="radio" name="inter-q1" value="c"> check
+                            </label>
+                            <label>
+                                <input type="radio" name="inter-q1" value="d"> verify
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p>2. Para que serve o elemento &lt;canvas&gt;?</p>
+                        <div class="quiz-options">
+                            <label>
+                                <input type="radio" name="inter-q2" value="a"> Criar animações CSS
+                            </label>
+                            <label>
+                                <input type="radio" name="inter-q2" value="b"> Desenhar gráficos via JavaScript
+                            </label>
+                            <label>
+                                <input type="radio" name="inter-q2" value="c"> Exibir vídeos
+                            </label>
+                            <label>
+                                <input type="radio" name="inter-q2" value="d"> Criar layouts responsivos
+                            </label>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <h3>CSS Avançado</h3>
+                    <div class="quiz-question">
+                        <p>3. O que são Media Queries?</p>
+                        <div class="quiz-options">
+                            <label>
+                                <input type="radio" name="inter-q3" value="a"> Consultas ao banco de dados
+                            </label>
+                            <label>
+                                <input type="radio" name="inter-q3" value="b"> Regras CSS para diferentes dispositivos
+                            </label>
+                            <label>
+                                <input type="radio" name="inter-q3" value="c"> Requisições AJAX
+                            </label>
+                            <label>
+                                <input type="radio" name="inter-q3" value="d"> APIs de mídia
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p>4. Qual é a diferença entre position: absolute e position: fixed?</p>
+                        <div class="quiz-options">
+                            <label>
+                                <input type="radio" name="inter-q4" value="a"> Não há diferença
+                            </label>
+                            <label>
+                                <input type="radio" name="inter-q4" value="b"> Fixed é relativo à viewport
+                            </label>
+                            <label>
+                                <input type="radio" name="inter-q4" value="c"> Absolute é sempre relativo ao body
+                            </label>
+                            <label>
+                                <input type="radio" name="inter-q4" value="d"> Fixed não suporta z-index
+                            </label>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <h3>JavaScript Avançado</h3>
+                    <div class="quiz-question">
+                        <p>5. O que é o Event Bubbling?</p>
+                        <div class="quiz-options">
+                            <label>
+                                <input type="radio" name="inter-q5" value="a"> Propagação de eventos DOM
+                            </label>
+                            <label>
+                                <input type="radio" name="inter-q5" value="b"> Método de ordenação
+                            </label>
+                            <label>
+                                <input type="radio" name="inter-q5" value="c"> Tipo de animação
+                            </label>
+                            <label>
+                                <input type="radio" name="inter-q5" value="d"> Sistema de cache
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p>6. O que é um closure em JavaScript?</p>
+                        <div class="quiz-options">
+                            <label>
+                                <input type="radio" name="inter-q6" value="a"> Um tipo de loop
+                            </label>
+                            <label>
+                                <input type="radio" name="inter-q6" value="b"> Uma função que mantém acesso ao escopo externo
+                            </label>
+                            <label>
+                                <input type="radio" name="inter-q6" value="c"> Um método de encerrar processos
+                            </label>
+                            <label>
+                                <input type="radio" name="inter-q6" value="d"> Uma classe final
+                            </label>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="quiz-controls">
+                <button id="submit-intermediate-quiz" class="btn-primary">Verificar Respostas</button>
+                <button id="reset-intermediate-quiz" class="btn-secondary">Recomeçar</button>
+            </div>
+
+            <div id="intermediate-quiz-results" class="quiz-results" style="display: none;">
+                <h3>Seus Resultados - Nível Intermediário</h3>
+                <p>Pontuação: <span id="intermediate-score">0</span>/6</p>
+                <div id="intermediate-feedback"></div>
+            </div>
+        </section>
     </main>
 
     <footer>

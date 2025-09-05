@@ -1,5 +1,116 @@
 // Menu hambúrguer
+// Quiz functionality
+const quizAnswers = {
+    basic: {
+        'basic-q1': 'b', // <h1>
+        'basic-q2': 'a', // criar um parágrafo
+        'basic-q3': 'b', // color: red
+        'basic-q4': 'b', // font-size
+        'basic-q5': 'b', // var x = 5
+        'basic-q6': 'b'  // console.log
+    },
+    intermediate: {
+        'inter-q1': 'b', // pattern
+        'inter-q2': 'b', // canvas para desenhos
+        'inter-q3': 'b', // media queries
+        'inter-q4': 'b', // fixed viewport
+        'inter-q5': 'a', // event bubbling
+        'inter-q6': 'b'  // closure
+    }
+};
+
+function showQuiz(level) {
+    // Esconde todos os quizzes
+    document.getElementById('basic-quiz').style.display = 'none';
+    document.getElementById('intermediate-quiz').style.display = 'none';
+
+    // Mostra o quiz selecionado
+    document.getElementById(`${level}-quiz`).style.display = 'block';
+
+    // Reseta o quiz
+    resetQuiz(level);
+}
+
+function checkQuiz(level) {
+    let score = 0;
+    let feedback = [];
+
+    // Check each question
+    Object.keys(quizAnswers[level]).forEach(question => {
+        const selected = document.querySelector(`input[name="${question}"]:checked`);
+        if (selected) {
+            if (selected.value === quizAnswers[level][question]) {
+                score++;
+                feedback.push(`Questão ${question.replace(`${level}-q`, '')}: Correto! ✅`);
+            } else {
+                feedback.push(`Questão ${question.replace(`${level}-q`, '')}: Incorreto ❌`);
+            }
+        } else {
+            feedback.push(`Questão ${question.replace(`${level}-q`, '')}: Não respondida ⚠️`);
+        }
+    });
+
+    // Update results
+    const resultsDiv = document.getElementById(`${level}-quiz-results`);
+    const scoreSpan = document.getElementById(`${level}-score`);
+    const feedbackDiv = document.getElementById(`${level}-feedback`);
+
+    if (resultsDiv && scoreSpan && feedbackDiv) {
+        scoreSpan.textContent = score;
+        feedbackDiv.innerHTML = feedback.join('<br>');
+        resultsDiv.style.display = 'block';
+    }
+}
+
+function resetQuiz(level) {
+    // Clear all selections for the specific level
+    document.querySelectorAll(`input[name^="${level}-q"]`).forEach(radio => {
+        radio.checked = false;
+    });
+
+    // Hide results
+    const resultsDiv = document.getElementById(`${level}-quiz-results`);
+    if (resultsDiv) {
+        resultsDiv.style.display = 'none';
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+    // Quiz level selection
+    const basicLevelBtn = document.getElementById('basic-level');
+    const intermediateLevelBtn = document.getElementById('intermediate-level');
+
+    if (basicLevelBtn) {
+        basicLevelBtn.addEventListener('click', () => showQuiz('basic'));
+    }
+
+    if (intermediateLevelBtn) {
+        intermediateLevelBtn.addEventListener('click', () => showQuiz('intermediate'));
+    }
+
+    // Quiz submission and reset for both levels
+    const submitBasicQuiz = document.getElementById('submit-basic-quiz');
+    const resetBasicQuiz = document.getElementById('reset-basic-quiz');
+    const submitIntermediateQuiz = document.getElementById('submit-intermediate-quiz');
+    const resetIntermediateQuiz = document.getElementById('reset-intermediate-quiz');
+
+    if (submitBasicQuiz) {
+        submitBasicQuiz.addEventListener('click', () => checkQuiz('basic'));
+    }
+
+    if (resetBasicQuiz) {
+        resetBasicQuiz.addEventListener('click', () => resetQuiz('basic'));
+    }
+
+    if (submitIntermediateQuiz) {
+        submitIntermediateQuiz.addEventListener('click', () => checkQuiz('intermediate'));
+    }
+
+    if (resetIntermediateQuiz) {
+        resetIntermediateQuiz.addEventListener('click', () => resetQuiz('intermediate'));
+    }
+
+    // Original code continues...
     const menuToggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('nav');
     const themeToggle = document.getElementById('theme-toggle');

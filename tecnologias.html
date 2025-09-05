@@ -27,7 +27,83 @@
     </header>
 
     <main>
-        <!-- Conteúdo será adicionado posteriormente -->
+        <section class="tech-hero">
+            <h2>Explore as Tecnologias Web</h2>
+            <p>Conheça as principais tecnologias usadas no desenvolvimento web moderno</p>
+        </section>
+
+        <div class="tech-controls">
+            <div class="filters">
+                <button class="filter-btn" data-filter="all" aria-expanded="true">Todas</button>
+                <button class="filter-btn" data-filter="frontend">Frontend</button>
+                <button class="filter-btn" data-filter="framework">Frameworks</button>
+                <button class="filter-btn" data-filter="tool">Ferramentas</button>
+            </div>
+            <div class="search-wrap">
+                <input type="search" id="tech-search" placeholder="Buscar tecnologia..." aria-label="Buscar tecnologia">
+            </div>
+        </div>
+
+        <div id="tech-grid" class="tech-grid">
+            <!-- Frontend -->
+            <article class="tech-card" data-category="frontend" data-name="HTML5">
+                <h3>HTML5 <span class="badge">Frontend</span></h3>
+                <p>A última versão do HTML com recursos modernos como elementos semânticos, áudio/vídeo nativos e canvas.</p>
+            </article>
+
+            <article class="tech-card" data-category="frontend" data-name="CSS3">
+                <h3>CSS3 <span class="badge">Frontend</span></h3>
+                <p>CSS moderno com flexbox, grid, animações, variáveis e muito mais para criar layouts incríveis.</p>
+            </article>
+
+            <article class="tech-card" data-category="frontend" data-name="JavaScript">
+                <h3>JavaScript <span class="badge">Frontend</span></h3>
+                <p>A linguagem de programação da web, essencial para criar interatividade e aplicações dinâmicas.</p>
+            </article>
+
+            <!-- Frameworks -->
+            <article class="tech-card" data-category="framework" data-name="React">
+                <h3>React <span class="badge">Framework</span></h3>
+                <p>Biblioteca JavaScript para construir interfaces de usuário com componentes reutilizáveis.</p>
+            </article>
+
+            <article class="tech-card" data-category="framework" data-name="Vue">
+                <h3>Vue.js <span class="badge">Framework</span></h3>
+                <p>Framework progressivo para construir interfaces de usuário com foco em simplicidade.</p>
+            </article>
+
+            <article class="tech-card" data-category="framework" data-name="Angular">
+                <h3>Angular <span class="badge">Framework</span></h3>
+                <p>Framework completo para criar aplicações web robustas e escaláveis.</p>
+            </article>
+
+            <!-- Ferramentas -->
+            <article class="tech-card" data-category="tool" data-name="Git">
+                <h3>Git <span class="badge">Ferramenta</span></h3>
+                <p>Sistema de controle de versão para gerenciar o código fonte do projeto.</p>
+            </article>
+
+            <article class="tech-card" data-category="tool" data-name="VSCode">
+                <h3>VS Code <span class="badge">Ferramenta</span></h3>
+                <p>Editor de código popular com extensões poderosas para desenvolvimento web.</p>
+            </article>
+
+            <article class="tech-card" data-category="tool" data-name="DevTools">
+                <h3>DevTools <span class="badge">Ferramenta</span></h3>
+                <p>Ferramentas de desenvolvedor do navegador para debug e otimização.</p>
+            </article>
+        </div>
+
+        <!-- Modal para detalhes -->
+        <div id="tech-modal" class="modal" aria-hidden="true">
+            <div class="modal-content">
+                <h2 id="modal-title"></h2>
+                <button id="modal-close" class="modal-close" aria-label="Fechar">&times;</button>
+                <p id="modal-body"></p>
+                <ul id="modal-bullets"></ul>
+                <a id="modal-link" href="#" target="_blank" rel="noopener">Saiba mais</a>
+            </div>
+        </div>
     </main>
 
     <footer>
